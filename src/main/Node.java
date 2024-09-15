@@ -115,6 +115,7 @@ public class Node extends JButton implements MouseListener,KeyListener {
     public void isControlLeftClick(){
         if(panel.isControlClicked){
             panel.setStartNode(this.row,this.col);
+            panel.findCostOnNodes();
         }
         else{
             leftClickEvent();
@@ -124,6 +125,7 @@ public class Node extends JButton implements MouseListener,KeyListener {
     public void isControlRightClick(){
         if(panel.isControlClicked){
             panel.setGoalNode(this.row,this.col);
+            panel.findCostOnNodes();
         }
         else{
             rightClickEvent();
